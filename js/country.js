@@ -9,7 +9,7 @@ const allCountries =countries=>{
     // console.log(countries);
     const showCountries =document.getElementById("show-country");
     countries.forEach(country => {
-        // console.log(country);
+        console.log(country);
         const div = document.createElement("div");
         div.classList.add("col");
         div.classList.add("h-full")
@@ -20,7 +20,6 @@ const allCountries =countries=>{
       <div class="card-body">
         <h2 class="card-title">${country.name.common}</h2>
         <h2 class="card-title">${country.name.official}</h2>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       </div>
 
         `
@@ -48,6 +47,7 @@ displaySearchCountry.innerHTML=`
         <h2 class="card-title">Capital : ${data[0].capital}</h2>
         <h2 class="card-title">Area : ${data[0].area}</h2>
         <h2 class="card-title">Population : ${data[0].population}</h2>
+        <img src="${data[0].coatOfArms.png}" class="w-full h-full p-2 card-img-top" alt="...">
       </div>
 `
 }
